@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <title> web bán sách</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+        <nav>
+            <ul>
+                <li> <a href="#home">TRANG CHỦ</a></li>
+                <li> <a href="#about">GIỚI THIỆU</a></li>
+                <li> <a href="#services">HƯỚNG DẪN MUA HÀNG</a></li>
+                <li> <a href="#artists">DANH MỤC SẢN PHẨM</a></li>
+                <li> <a href="#contact">LIÊN HỆ</a></li>
+            </ul>
+        </nav>
+        </header>
+
+
+    <section id="home">
+		<div class="hero">
+            <div class="centered-content">
+                <img src="anhnen.jpg" alt="Welcome Our Bookstore">
+                <h1>Chào mừng đến với Cửa hàng Sách của chúng tôi</h1>
+            </div>
+         </div>
+        </section>
+        <div class="container">
+          
+            <div id="search-section">
+                <h2>Tìm kiếm sách</h2>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm sách...">
+                    <button type="submit">Tìm kiếm</button>
+                </form>
+                <div id="search-results" class="book-grid">
+      
+                </div>
+
+            </div>
+            <section id="about">
+                <div class="huda">
+                    <h2>Hướng dẫn mua hàng</h2>
+                    <p><strong>Bước 1:</strong>tìm kiếm tên sách trong phần tìm kiếm </p>
+                    <p><strong>Bước 2:</strong>nhấn vào nút "Mua hàng "bên dưới phần giá của sách</p>
+                    <p><strong>Bước 3</strong>nhấn vào nút "Thanh toán" để có thể thanh toán</p>
+                </div>
+            </section>
+         
+            <div id="category-section">
+                <h2>Phân loại sách</h2>
+                <select id="category-select">
+                    <option value="">Tất cả thể loại</option>
+                    <option value="sach-viet"> Sách Việt</option>
+                    <option value="sach-nuoc-ngoai">Sách nước ngoài</option>
+                    <option>value=""</option>
+                </select>
+                <div id="category-books" class="book-grid">
+                   
+                </div>
+            </div>
+        </div>
+
+<div id="cart-section" class="huda">
+    <h2>Giỏ hàng</h2>
+    <div id="cart-items">
+        
+    </div>
+    <p>Tổng cộng: <span id="cart-total">$0.00</span></p>
+    <button onclick="checkout()">Thanh toán</button>
+</div>
+
+        <div>
+            <script>
+                
+                const books = [
+                    { title: "Chí Phèo", author: "Nam Cao", price: 25.99, category: "sach-viet",image: "chipheo.jpg" },
+                    { title: "Totto-chan bên cửa sổ", author: "Tetsuko Kuroyanagi", price: 20.49, category: "sach-nuoc-ngoai", image: "tottochan.jpg"},
+                    { title: "Lão Hạc", author: "Nam Cao", price: 15.99, category: "sach-viet",image:"laohac.jpg" },
+                    { title: "Harry Potter và Hòn Đá Phù Thủy", author: "J.K. Rowling", price: 30.99, category: "sach-nuoc-ngoai",image:"harrypotter.jpg" },
+                    { title: "Dế Mèn Phiêu Lưu Ký", author: "Tô Hoài", price: 18.99, category: "sach-viet",image:"demen.jpg" },
+                    { title: "Sherlock Holmes: Tập 1", author: "Arthur Conan Doyle", price: 22.99, category: "sach-nuoc-ngoai",image:"holmes1.jpg" },
+                    { title: "Truyện Kiều", author: "Nguyễn Du", price: 19.99, category: "sach-viet",image:"kieu.jpg" },
+                    { title: "Gatsby vĩ đại ", author: "F. Scott Fitzgerald", price: 24.99, category: "sach-nuoc-ngoai",image:"gatsby.jpg" }
+                ];
+        
+                const searchForm = document.getElementById("search-form");
+                const searchInput = document.getElementById("search-input");
+                const searchResults = document.getElementById("search-results");
+                const categorySelect = document.getElementById("category-select");
+                const categoryBooks = document.getElementById("category-books");
+                const cartItemsContainer = document.getElementById("cart-items");
+                const cartTotal = document.getElementById("cart-total");
+                let cart = [];
+        
+                
+                function searchBooks(query) {
+                    searchResults.innerHTML = ""; 
+        
+                    books.forEach(book => {
+                        if (book.title.toLowerCase().includes(query.toLowerCase())) {
+                            const bookItem = document.createElement("div");
+                            bookItem.classList.add("book");
+                            bookItem.innerHTML = `
+                                <img src="${book.image}" alt="${book.title}">
+                                <h3>${book.title}</h3>
+                                <p>Tác giả: ${book.author}</p>
+                                <p>Giá: $${book.price}</p>
+                                <button onclick="addToCart('${book.title}')">Mua hàng</button>
+                            `;
+                            searchResults.appendChild(bookItem);
+                        }
+                    });
+                }
+        
+                function displayCategoryBooks(category) {
+                    categoryBooks.innerHTML = ""; 
+        
+                    books.forEach(book => {
+                        if (book.category === category || category === "") {
+                            const bookItem = document.createElement("div");
+                            bookItem.classList.add("book");
+                            bookItem.innerHTML = `
+                                <img src="${book.image}" alt="${book.title}">
+                                <h3>${book.title}</h3>
+                                <p>Tác giả: ${book.author}</p>
+                                <p>Giá: $${book.price}</p>
+                                <button onclick="addToCart('${book.title}')">Mua hàng</button>
+                            `;
+                            categoryBooks.appendChild(bookItem);
+                        }
+                    });
+                }
+        
+                
+                function addToCart(book) {
+                    cart.push(book);
+                    displayCart();
+                }
+        
+                
+                function displayCart() {
+                    cartItemsContainer.innerHTML = "";
+                    let total = 0;
+        
+                    cart.forEach(book => {
+                        const bookInfo = books.find(item => item.title === book);
+                        if (bookInfo) {
+                            const item = document.createElement("div");
+                            item.innerHTML = `<p>${bookInfo.title} - $${bookInfo.price}</p>`;
+                            cartItemsContainer.appendChild(item);
+                            total += bookInfo.price;
+                        }
+                    });
+        
+                    cartTotal.textContent = `$${total.toFixed(2)}`;
+                }
+        
+                
+                function checkout() {
+                    
+                    alert("Chức năng thanh toán chưa được triển khai!");
+                }
+        
+                
+                searchForm.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const query = searchInput.value.trim();
+                    searchBooks(query);
+                });
+        
+                
+                categorySelect.addEventListener("change", function() {
+                    const category = categorySelect.value;
+                    displayCategoryBooks(category);
+                });
+        
+               
+                displayCategoryBooks("");
+            </script>
+        </div>
+           
+        <section id="contact">
+            <div class="huda">
+                <h2>Liên hệ</h2>
+                <p>123-456-789</p>
+                <p>bookshop@gmail.com</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>@bookshop.vn</p>
+        </footer>
+
+    </body>
+</html>
