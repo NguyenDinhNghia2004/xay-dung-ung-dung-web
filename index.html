@@ -14,7 +14,7 @@
                 <li> <a href="#home">TRANG CHỦ</a></li>
                 <li> <a href="#about">GIỚI THIỆU</a></li>
                 <li> <a href="#services">HƯỚNG DẪN MUA HÀNG</a></li>
-                <li> <a href="#artists">DANH MỤC SẢN PHẨM</a></li>
+                <li> <a href="#category-section" id="category-link">DANH MỤC SẢN PHẨM</a></li>
                 <li> <a href="#contact">LIÊN HỆ</a></li>
             </ul>
         </nav>
@@ -42,7 +42,15 @@
                 </div>
 
             </div>
+            
             <section id="about">
+                <div class="huda">
+                    <h2>GIỚI THIỆU</h2>
+                    <p></p>
+                </div>
+            </section>
+
+            <section id="services">
                 <div class="huda">
                     <h2>Hướng dẫn mua hàng</h2>
                     <p><strong>Bước 1:</strong>tìm kiếm tên sách trong phần tìm kiếm </p>
@@ -76,6 +84,7 @@
 
         <div>
             <script>
+    
                 
                 const books = [
                     { title: "Chí Phèo", author: "Nam Cao", price: 25.99, category: "sach-viet",image: "chipheo.jpg" },
@@ -181,6 +190,18 @@
         
                
                 displayCategoryBooks("");
+                 
+                document.addEventListener("DOMContentLoaded", function() {
+    const categoryLink = document.getElementById('category-link');
+    const categorySection = document.getElementById('category-section');
+
+    categoryLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        categorySection.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+
             </script>
         </div>
            
