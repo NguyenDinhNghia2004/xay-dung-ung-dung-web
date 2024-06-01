@@ -21,7 +21,7 @@ header {
     max-width: 100%;
     height: 50%;
     max-height: 50%;
-    margin: 0 auto; /* Để hình ảnh được căn giữa */
+    margin: 0 auto; 
 }
 
 .centered-content h1 {
@@ -29,8 +29,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: de; /* Màu của văn bản */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng cho văn bản */
+    color: de; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 nav ul {
