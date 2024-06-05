@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Sách IELTS Cambridge 1",
+        "productDescription": "Bộ sách luyện thi IELTS Cambridge từ tập 1 đến tập 17.",
+        "productPrice":13000,
+        "mosted" : 1
+    },
+    {
+        "id": 2,
+        "productImage": "./imgs/anh-sach-vo-2.jpg",
+        "productTitle": "Hacker IELTS",
+        "productDescription": "Bộ sách Hacker IELTS với các kỹ năng nghe, nói, đọc, viết.",
+        "productPrice": 13000,
+        "mosted" : 1
+    },
+    {
+        "id": 3,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Destination B1",
+        "productDescription": "Sách Destination B1 luyện ngữ pháp và từ vựng cho kỳ thi IELTS.",
+        "productPrice": 34.79,
+        "mosted" : 1
+    },
+    {
+        "id": 4,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Destination B2",
+        "productDescription": "Sách Destination B2 luyện ngữ pháp và từ vựng cho kỳ thi IELTS.",
+        "productPrice": 94.35,
+        "mosted" : 1
+    },
+    {
+        "id": 5,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Destination C1 & C2",
+        "productDescription": "Sách Destination C1 & C2 luyện ngữ pháp và từ vựng nâng cao cho kỳ thi IELTS.",
+        "productPrice": 77.14,
+        "mosted" : 1
+    },
+    {
+        "id": 6,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Vocabulary for IELTS",
+        "productDescription": "Sách từ vựng cho kỳ thi IELTS từ Cambridge.",
+        "productPrice": 79.25,
+        "mosted" : 1
+    },
+    {
+        "id": 7,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Grammar for IELTS",
+        "productDescription": "Sách ngữ pháp cho kỳ thi IELTS từ Cambridge.",
+        "productPrice": 34.22
+    },
+    {
+        "id": 8,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "Complete IELTS",
+        "productDescription": "Bộ sách Complete IELTS từ Cambridge với đầy đủ các kỹ năng.",
+        "productPrice": 17.95
+    },
+    {
+        "id": 9,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "IELTS Practice Tests",
+        "productDescription": "Sách luyện đề thi IELTS với các bài kiểm tra thực tế.",
+        "productPrice": 33.72
+    },
+    {
+        "id": 10,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "IELTS Trainer",
+        "productDescription": "Sách IELTS Trainer với các bài luyện tập và hướng dẫn chi tiết.",
+        "productPrice": 1200
+    },
+    {
+        "id": 11,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "IELTS Trainer",
+        "productDescription": "Sách IELTS Trainer với các bài luyện tập và hướng dẫn chi tiết.",
+        "productPrice": 1200.21
+    },
+    {
+        "id": 12,
+        "productImage": "https://cdn1131.cdn4s2.com/thumbs/hacker/z4247666692487_71ef04af6cf42bc4b9ef288f9e7cab1d_thumb_350.jpg",
+        "productTitle": "IELTS Trainer",
+        "productDescription": "Sách IELTS Trainer với các bài luyện tập và hướng dẫn chi tiết.",
+        "productPrice": 1200
+    }
+
+]

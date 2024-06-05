@@ -32,7 +32,7 @@
 
 </head>
 
-<body class=" home">
+<body class="home">
     <header>
         <div class="">
             <div class="row no-gutters">
@@ -83,8 +83,8 @@
                         <div class=""></div>
                         <div class="" onclick="window.location.href = 'cart.html'">
                             <!-- onclick="document.getElementById('sidebar-mini-cart-id').classList.add('open');" -->
-                            <div class="entire-action-header" style="cursor: pointer;"><a
-                                    class="btn-mini-cart btn-action-header" title="Giỏ hàng" href="javascript:;">
+                            <div class="entire-action-header" style="cursor: pointer;"><a class="btn-mini-cart btn-action-header"
+                                    title="Giỏ hàng">
                                     <div class="icon">
                                         <img class="img-fluid" src="https://cdn1131.cdn4s2.com/media/icon/icon_cart.png"
                                             alt="Giỏ hàng"><span class="items-number" id="item-cart-id"></span>
@@ -142,104 +142,226 @@
             </div>
         </div>
     </header>
-    <div class="">
+    <div class="bg-light">
         <div class="row no-gutters">
             <div class="col-md-12 col-12">
                 <div class="">
-                    <div class="swiper swiper-slider-main">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide "><img
-                                    src="https://cdn1131.cdn4s2.com/media/banner/banner%20web.jpg" class="img-fluid"
-                                    alt="IELTS"></div>
-                        </div><!-- If we need pagination -->
-                        <div class="swiper-pagination swiper-pagination-vertical"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-msk">
-        <div nh-row="2xomk9y" class="bg-light pt-50">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-12 col-12">
-                        <div nh-block="2zrniul" nh-block-cache="true" class="">
-                            <div class="header-slider">
-                                <h3 class="title-section"><a href="/sach-ielts" title="Sách IELTS">SÁCH ĐƯỢC
-                                        ĐẶT NHIỀU NHẤT</a></h3>
+                    <div>
+                        <div class="p-3 bg-white mb-3">
+                            <div class="container">
+                                <nav class="breadcrumbs-section">
+                                </nav>
                             </div>
-                            <div class="swiper">
-                                <div id="swiper-wrapper-list-id" class="swiper-wrapper multiple-items-1">
-                                    <!-- <div class="product-item item-slider swiper-slide">
-                                        <div class="inner-image">
-                                            <div class="product-status"></div>
-                                            <div class="ratio-custome"><a href="/cambridge-ielts-18-le"
-                                                    title="Cambridge IELTS  1-18 lẻ"><img nh-lazy="image"
-                                                        class="img-fluid"
-                                                        src="https://cdn1131.cdn4s2.com/thumbs/cambridge%20ielts/ielts%2017_thumb_350.jpg"
-                                                        alt="Cambridge IELTS  1-18 lẻ"></a>
+                        </div>
+                        <div class="container">
+                            <div class="checkout-section mb-5">
+                                <form id="order-info">
+                                    <div class="row mx-n2">
+                                        <div id="order-info-left" class="col-lg-7 col-md-6 px-2">
+                                            <div class="bg-white p-4 mb-3">
+                                                <div class="h4 font-weight-bold mb-4">
+                                                    Thông tin đặt hàng
+                                                </div>
+
+                                                <div class="scrollbar" id="payment-list-id"
+                                                    style="max-height: 34rem;overflow-x: hidden;">
+                                                </div>
+
                                             </div>
-                                            <div class="product-action"><a class="btn-product-action"
-                                                    href="/cambridge-ielts-18-le" title="Xem chi tiết"><i
-                                                        class="fa-solid fa-cart-shopping"></i></a><a
-                                                    nh-btn-action="quick-view" data-product-id="47"
-                                                    class="btn-product-action" href="javascript:;"
-                                                    title="Xem nhanh"><i class="fa fa-search-plus"></i></a></div>
+                                            <div class="bg-white p-4 mb-3">
+                                                <div class="billing-details mt-4">
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <div class="h4 font-weight-bold mb-0">
+                                                            Địa chỉ nhận hàng
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="inner-col-1">
+                                                        <div class="form-billing">
+                                                            <div class="form-group validate-form">
+                                                                <input required class="form-control" name="full_name" value=""
+                                                                    type="text" placeholder="Họ và tên">
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-lg-8 col-12">
+                                                                    <div class="form-group validate-form">
+                                                                        <input required class="form-control" name="email"
+                                                                            value="" type="email" placeholder="Email">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-lg-4 col-12">
+                                                                    <div class="form-group validate-form">
+                                                                        <input required class="form-control" name="phone"
+                                                                            value="" type="text"
+                                                                            placeholder="Số điện thoại">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group validate-form">
+                                                                <input class="form-control" required name="address" value=""
+                                                                    placeholder="Số nhà ngõ đường" type="text">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-6 col-12">
+                                                                    <div class="form-group validate-form">
+                                                                        <select name="city_id" required id="city"
+                                                                            class="form-control selectpicker"
+                                                                            data-size="10" data-live-search="1">
+                                                                            <option value="">-- Tỉnh thành --</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-lg-6 col-12">
+                                                                    <div class="form-group validate-form">
+                                                                        <select name="district_id" required id="district"
+                                                                            class="form-control selectpicker"
+                                                                            data-size="10" data-live-search="1">
+                                                                            <option value="">-- Quận huyện --</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-12">
+                                                                    <div class="form-group validate-form">
+                                                                        <select name="ward_id" required id="ward"
+                                                                            class="form-control selectpicker"
+                                                                            data-size="10" data-live-search="1">
+                                                                            <option value="">-- Phường xã --</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="inner-col-2 mb-5">
+                                                        <label>Ghi chú</label>
+                                                        <textarea class="form-control border-gray" name="note" rows="2"
+                                                            cols="5"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div class="inner-content text-center">
-                                            <div class="product-title"><a href="/cambridge-ielts-18-le">Cambridge
-                                                    IELTS
-                                                    1-18
-                                                    lẻ</a></div>
-                                            <div class="price"><span class="price-amount">28,000<span
-                                                        class="currency-symbol">đ</span></span></div>
+                                        <div id="order-info-right" class="col-lg-5 col-md-6 px-2">
+                                            <div class="order-review">
+                                                <div class="entry-order-review">
+                                                    <div class="card bg-white mb-3 py-3 px-4">
+                                                        <div class="card-header">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center mb-3">
+                                                                <span class="d-flex align-items-center">
+                                                                    <i class="fa-solid fa-truck color-highlight"></i>
+                                                                    <div class="pl-2 mb-0 font-weight-bold">
+                                                                        Phương thức vận chuyển
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swich-change bg-white ">
+                                                            <label class="d-flex align-items-center border rounded p-3"
+                                                                for="shipping-method-1">
+                                                                <div>
+                                                                    Tự vận chuyển
+                                                                    <div class="font-weight-normal">
+                                                                        Phí vận chuyển:
+                                                                        25,000
+                                                                        <span class="currency-symbol fs-12">
+                                                                            đ
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="ml-auto checked">
+                                                                    <i class="fa-solid fa-check fa-2x"></i>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="p-4 bg-white">
+                                                        <div class="d-flex justify-content-between mb-3">
+                                                            <span>
+                                                                Đơn giá
+                                                            </span>
+
+                                                            <span class="text-right">
+                                                                <strong>
+                                                                    <span class="price-amount" id="total-price-sum-id">
+                                                                        <!-- 28,000
+																		<span class="currency-symbol">
+																			đ
+																		</span> -->
+                                                                    </span>
+                                                                </strong>
+
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="d-flex justify-content-between mb-3">
+                                                            <span>
+                                                                Phí vận chuyển
+                                                            </span>
+                                                            <span class="color-hover text-right">
+                                                                <strong>
+                                                                    <span class="price-amount">
+                                                                        + 25,000
+                                                                        <span class="currency-symbol">
+                                                                            đ
+                                                                        </span>
+                                                                    </span>
+                                                                </strong>
+                                                            </span>
+                                                        </div>
+                                                        <div class="separation-dash mb-3"></div>
+
+                                                        <div class="d-flex justify-content-between mb-3">
+                                                            <span>
+                                                                Thành tiền
+                                                            </span>
+
+                                                            <span class="color-hover text-right">
+                                                                <strong>
+                                                                    <span class="price-amount" id="total-pr-id">
+                                                                    </span>
+                                                                </strong>
+
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="checkout-payment bg-white p-4">
+                                                        <input type="button" onclick="paymentInvoice()" nh-btn-action="create-order"
+                                                            class="btn btn-submit w-100 mb-3" value="Thanh toán"/>
+                                                            <!-- Thanh toán
+                                                        </span> -->
+                                                        <a title="Quay lại giỏ hàng"
+                                                            class="order-back fs-14 d-flex align-items-center color-main mt-15"
+                                                            href="/cart.html">
+                                                            <i class="fa-solid fa-arrow-left mr-2"></i>
+                                                            Quay lại giỏ hàng
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-item item-slider swiper-slide">
-                                        <div class="inner-image">
-                                            <div class="product-status"></div>
-                                            <div class="ratio-custome"><a href="/cambridge-ielts-18-le"
-                                                    title="Cambridge IELTS  1-18 lẻ"><img nh-lazy="image"
-                                                        class="img-fluid"
-                                                        src="https://cdn1131.cdn4s2.com/thumbs/cambridge%20ielts/ielts%2017_thumb_350.jpg"
-                                                        alt="Cambridge IELTS  1-18 lẻ"></a>
-                                            </div>
-                                            <div class="product-action"><a class="btn-product-action"
-                                                    href="/cambridge-ielts-18-le" title="Xem chi tiết"><i
-                                                        class="fa-solid fa-cart-shopping"></i></a><a
-                                                    nh-btn-action="quick-view" data-product-id="47"
-                                                    class="btn-product-action" href="javascript:;"
-                                                    title="Xem nhanh"><i class="fa fa-search-plus"></i></a></div>
-                                        </div>
-                                        <div class="inner-content text-center">
-                                            <div class="product-title"><a href="/cambridge-ielts-18-le">Cambridge
-                                                    IELTS
-                                                    1-18
-                                                    lẻ</a></div>
-                                            <div class="price"><span class="price-amount">28,000<span
-                                                        class="currency-symbol">đ</span></span></div>
-                                        </div>
-                                    </div> -->
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row ">
-                <div class="col-md-12 col-12">
-                    <divclass="">
-                        <div class="header-slider">
-                            <h3 class="title-section"><a href="/#" title="Tất cả sách">Tất cả sách</a></h3>
-                        </div>
-                        <div class="row" id="book-list">
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     <footer src="https://cdn1131.cdn4s2.com/media/template/bg_footer.png">
         <div class="top-footer">
@@ -358,88 +480,6 @@
         </div>
     </footer>
 
-
-
-
-    <div id="login-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-md modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-
-                    <div class="modal-title h2 text-uppercase text-center font-weight-bold pt-5">
-                        Đăng nhập
-                    </div>
-                    <form nh-form="member-login" action="/member/ajax-login" method="post" autocomplete="off">
-                        <div class="p-5">
-                            <div class="row mx-n2">
-                                <div class="col-md-6 col-12 px-2">
-                                    <span nh-btn-login-social="google"
-                                        nh-oauthserver="https://accounts.google.com/o/oauth2/v2/auth"
-                                        class="btn btn-submit d-flex align-items-center justify-content-center text-center mb-3 rounded">
-                                        <i class="fa-2x fa-brands fa-google mr-3"></i>
-                                        Đăng nhập google
-                                    </span>
-                                </div>
-                                <div class="col-md-6 col-12 px-2">
-                                    <span nh-btn-login-social="facebook"
-                                        nh-oauthserver="https://www.facebook.com/v14.0/dialog/oauth"
-                                        class="btn btn-submit d-flex align-items-center justify-content-center text-center mb-3 rounded">
-                                        <i class="fa-2x fa-brands fa-facebook mr-3"></i>
-                                        Đăng nhập facebook
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="text-line-through mb-3">
-                                <span>Hoặc tài khoản</span>
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <input name="username" id="username" type="text" class="form-control required"
-                                    placeholder="Tài khoản">
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <input name="password" id="password" type="password" class="form-control required"
-                                    placeholder="Mật khẩu">
-                            </div>
-                            <a class="mb-4 d-block text-dark" href="/member/forgot-password">
-                                Quên mật khẩu ?
-                            </a>
-                            <button nh-btn-action="submit" class="btn btn-submit w-100 mb-3">
-                                Đăng nhập
-                            </button>
-                            <input type="hidden" name="redirect" value="">
-                            <a href="/member/register"
-                                class="d-block text-uppercase font-weight-bold color-highlight mt-3">
-                                Đăng ký ngay
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="info-comment-modal" class="modal fade" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h3 class="modal-comment-title text-center"><b>Thông tin người gửi</b></h3>
-                    <div class="modal-comment-content">
-                        <div class="text-center  mb-5">Để gửi bình luận bạn vui lòng cung cấp thêm thông tin liên hệ
-                        </div>
-                        <form id="info-comment-form" method="POST" autocomplete="off">
-                            <div class="form-group"><label>Tên hiển thị:<span class="required">*</span></label><input
-                                    name="full_name" class="form-control" type="text"></div>
-                            <div class="form-group"><label>Email:<span class="required">*</span></label><input
-                                    name="email" class="form-control" type="text"></div>
-                            <div class="form-group"><label>Số điện thoại:<span class="required">*</span></label><input
-                                    name="phone" class="form-control" type="text"></div>
-                        </form>
-                    </div><button id="btn-send-info" type="button" class="col-12 btn btn-primary">Cập nhật</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="toasts" class="position-fixed p-3" style="z-index: 100000; right: 0; top: 0;"></div>
 
     <div id="quick-view-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -510,21 +550,52 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="./js/product.js"></script>
-    <!-- <script src="./js/order.js" type="text/javascript"></script> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script>
-
-        $('.multiple-items').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 5,
-            autoplay: true,
-            slidesToScroll: 3,
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("district");
+        var wards = document.getElementById("ward");
+        var Parameter = {
+            url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+            method: "GET",
+            responseType: "application/json",
+        };
+        var promise = axios(Parameter);
+        promise.then(function (result) {
+            renderCity(result.data);
         });
 
+        function renderCity(data) {
+            for (const x of data) {
+                citis.options[citis.options.length] = new Option(x.Name, x.Id);
+            }
+            citis.onchange = function () {
+                district.length = 1;
+                ward.length = 1;
+                if (this.value != "") {
+                    const result = data.filter(n => n.Id === this.value);
+
+                    for (const k of result[0].Districts) {
+                        district.options[district.options.length] = new Option(k.Name, k.Id);
+                    }
+                }
+            };
+            district.onchange = function () {
+                ward.length = 1;
+                const dataCity = data.filter((n) => n.Id === citis.value);
+                if (this.value != "") {
+                    const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+                    for (const w of dataWards) {
+                        wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                    }
+                }
+            };
+        }
     </script>
+    <script type="text/javascript" src="./js/payment.js"></script>
+
+
 </body>
 
 </html>

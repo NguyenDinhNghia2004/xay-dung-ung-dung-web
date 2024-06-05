@@ -83,8 +83,8 @@
                         <div class=""></div>
                         <div class="" onclick="window.location.href = 'cart.html'">
                             <!-- onclick="document.getElementById('sidebar-mini-cart-id').classList.add('open');" -->
-                            <div class="entire-action-header" style="cursor: pointer;"><a
-                                    class="btn-mini-cart btn-action-header" title="Giỏ hàng" href="javascript:;">
+                            <div class="entire-action-header" style="cursor: pointer;"><a class="btn-mini-cart btn-action-header"
+                                     title="Giỏ hàng">
                                     <div class="icon">
                                         <img class="img-fluid" src="https://cdn1131.cdn4s2.com/media/icon/icon_cart.png"
                                             alt="Giỏ hàng"><span class="items-number" id="item-cart-id"></span>
@@ -142,105 +142,91 @@
             </div>
         </div>
     </header>
-    <div class="">
-        <div class="row no-gutters">
-            <div class="col-md-12 col-12">
-                <div class="">
-                    <div class="swiper swiper-slider-main">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide "><img
-                                    src="https://cdn1131.cdn4s2.com/media/banner/banner%20web.jpg" class="img-fluid"
-                                    alt="IELTS"></div>
-                        </div><!-- If we need pagination -->
-                        <div class="swiper-pagination swiper-pagination-vertical"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-msk">
-        <div nh-row="2xomk9y" class="bg-light pt-50">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-12 col-12">
-                        <div nh-block="2zrniul" nh-block-cache="true" class="">
-                            <div class="header-slider">
-                                <h3 class="title-section"><a href="/sach-ielts" title="Sách IELTS">SÁCH ĐƯỢC
-                                        ĐẶT NHIỀU NHẤT</a></h3>
-                            </div>
-                            <div class="swiper">
-                                <div id="swiper-wrapper-list-id" class="swiper-wrapper multiple-items-1">
-                                    <!-- <div class="product-item item-slider swiper-slide">
-                                        <div class="inner-image">
-                                            <div class="product-status"></div>
-                                            <div class="ratio-custome"><a href="/cambridge-ielts-18-le"
-                                                    title="Cambridge IELTS  1-18 lẻ"><img nh-lazy="image"
-                                                        class="img-fluid"
-                                                        src="https://cdn1131.cdn4s2.com/thumbs/cambridge%20ielts/ielts%2017_thumb_350.jpg"
-                                                        alt="Cambridge IELTS  1-18 lẻ"></a>
-                                            </div>
-                                            <div class="product-action"><a class="btn-product-action"
-                                                    href="/cambridge-ielts-18-le" title="Xem chi tiết"><i
-                                                        class="fa-solid fa-cart-shopping"></i></a><a
-                                                    nh-btn-action="quick-view" data-product-id="47"
-                                                    class="btn-product-action" href="javascript:;"
-                                                    title="Xem nhanh"><i class="fa fa-search-plus"></i></a></div>
-                                        </div>
-                                        <div class="inner-content text-center">
-                                            <div class="product-title"><a href="/cambridge-ielts-18-le">Cambridge
-                                                    IELTS
-                                                    1-18
-                                                    lẻ</a></div>
-                                            <div class="price"><span class="price-amount">28,000<span
-                                                        class="currency-symbol">đ</span></span></div>
+    <div class="bg-light">
+		<div class="row no-gutters">
+			<div class="col-md-12 col-12">
+				<div class="">
+					<div class="p-3 bg-white mb-3">
+						<div class="container">
+							<nav class="breadcrumbs-section">
+							</nav>
+						</div>
+					</div>
+                    <div class="container">
+                        <div>
+                            <div class="bg-white p-4 mb-3">
+                                <div class="h4 font-weight-bold mb-4">Thông tin sản phẩm<small id="total-quantity-id"> </small></div>
+                                <table class="table cart-info-section responsive-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Sản phẩm</th>
+                                            <th>Giá</th>
+                                            <th>Số lượng</th>
+                                            <th class="text-right">Tổng tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cart-list-id">
+                                        <!-- <tr class="cart-item border-bottom">
+                                            <th scope="row">
+                                                <div class="row mx-n2">
+                                                    <div class="col-lg-2 col-3 px-2">
+                                                        <div class="rounded overflow-hidden ratio-1-1"><a
+                                                                href="/combo-cambridge-ielts-7-18"><img class="img-fluid"
+                                                                    src="https://cdn1131.cdn4s2.com/thumbs/cambridge ielts/cam 18/z4478243938895_e03b698d67350e52694c842d4ddaeb9e_thumb_150.jpg"
+                                                                    alt="combo cambridge IELTS 7-18"></a></div>
+                                                    </div>
+                                                    <div class="col-lg-10 col-9 px-2">
+                                                        <div class="flex-column d-flex"><a href="/combo-cambridge-ielts-7-18">
+                                                                <div class="name-cart"> combo cambridge IELTS 7-18 </div>
+                                                            </a>
+                                                            <div class="remove-cart mt-2"><a href=""
+                                                                    class="font-weight-normal color-highlight">Xóa</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td data-title="Giá"><span>336,000</span><span class="currency-symbol">đ</span></td>
+                                            <td data-title="Số lượng" class="item-quantity">
+                                                <div class="product-quantity ">
+                                                    <span class="btn-quantity quantity-subtract">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                    <input value="1" class="text-center number-input" type="text" maxlength="3">
+                                                        <span class="btn-quantity quantity-add">
+                                                            <i class="fas fa-plus"></i>
+                                                        </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-right" data-title="Tiền"><span
+                                                    >336,000</span><span
+                                                    class="currency-symbol">đ</span></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <div class="col-lg-6 ml-auto">
+                                        <div class="entire-cart-totals mt-4">
+                                            <table class="cart-totals">
+                                                <tbody>
+                                                    <tr class="order-total">
+                                                        <th>TỔNG TIỀN</th>
+                                                        <td class="mr-6"><b><span class="price-amount"><span id="total-price-sum-id">784,000</span><span
+                                                                        class="currency-symbol">đ</span></span></b></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="proceed-to-checkout"><a nh-cart-action="cart-confirm"
+                                                    href="/payment.html" class="btn btn-submit w-100">Xác nhận giỏ hàng</a></div>
                                         </div>
                                     </div>
-                                    <div class="product-item item-slider swiper-slide">
-                                        <div class="inner-image">
-                                            <div class="product-status"></div>
-                                            <div class="ratio-custome"><a href="/cambridge-ielts-18-le"
-                                                    title="Cambridge IELTS  1-18 lẻ"><img nh-lazy="image"
-                                                        class="img-fluid"
-                                                        src="https://cdn1131.cdn4s2.com/thumbs/cambridge%20ielts/ielts%2017_thumb_350.jpg"
-                                                        alt="Cambridge IELTS  1-18 lẻ"></a>
-                                            </div>
-                                            <div class="product-action"><a class="btn-product-action"
-                                                    href="/cambridge-ielts-18-le" title="Xem chi tiết"><i
-                                                        class="fa-solid fa-cart-shopping"></i></a><a
-                                                    nh-btn-action="quick-view" data-product-id="47"
-                                                    class="btn-product-action" href="javascript:;"
-                                                    title="Xem nhanh"><i class="fa fa-search-plus"></i></a></div>
-                                        </div>
-                                        <div class="inner-content text-center">
-                                            <div class="product-title"><a href="/cambridge-ielts-18-le">Cambridge
-                                                    IELTS
-                                                    1-18
-                                                    lẻ</a></div>
-                                            <div class="price"><span class="price-amount">28,000<span
-                                                        class="currency-symbol">đ</span></span></div>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row ">
-                <div class="col-md-12 col-12">
-                    <divclass="">
-                        <div class="header-slider">
-                            <h3 class="title-section"><a href="/#" title="Tất cả sách">Tất cả sách</a></h3>
-                        </div>
-                        <div class="row" id="book-list">
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+				</div>
+			</div>
+		</div>
+	</div>
     <footer src="https://cdn1131.cdn4s2.com/media/template/bg_footer.png">
         <div class="top-footer">
             <div class="container">
@@ -510,8 +496,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="./js/product.js"></script>
-    <!-- <script src="./js/order.js" type="text/javascript"></script> -->
+    <!-- <script type="text/javascript" src="./js/product.js"></script> -->
+    <script src="./js/order.js" type="text/javascript"></script>
 
     <script>
 
