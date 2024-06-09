@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <title>Trang chủ</title>
+    <title>Trang thanh toán</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -70,13 +70,13 @@
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="box-search">
-                            <form class="position-relative" action="/tim-kiem" method="get">
-                                <div class="input-group"><input name="keyword" placeholder="Từ khóa tìm kiếm"
+                            <div class="position-relative">
+                                <div class="input-group"><input name="keyword" id="keyword11-id" placeholder="Từ khóa tìm kiếm"
                                         type="text" class="form-control" value="">
-                                    <div class="input-group-append"><button class="btn btn-submit" type="submit"><i
+                                    <div class="input-group-append"><button onclick="searchItem()" class="btn btn-submit" type="submit"><i
                                                 class="fas fa-magnifying-glass"></i></button></div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-12">
@@ -113,14 +113,13 @@
                                                     class="fa-light fa-chevron-down"></span></a></li>
                                         <li class=""><a href="/#">Giới thiệu<span
                                                     class="fa-light fa-chevron-down"></span></a></li>
-                                        <li class="position-relative has-child "><a href="/san-pham">Danh Mục Sản
-                                                Phẩm </a><span class="grower" nh-toggle="pyhe1qn0i7"></span>
+                                        <li class="position-relative has-child "><a href="/filter.html">Danh Mục Sản
+                                                Phẩm </a><span class="grower"></span>
                                             <ul nh-toggle-element="pyhe1qn0i7" class="entry-menu dropdown">
-                                                <li class=" "><a class="menu-link" href="/cam-ielts">Cam IELTS</a></li>
-                                                <li class=" "><a class="menu-link" href="/sach-ban-chay">Sách bán
+                                                <li class=" "><a class="menu-link" href="/filter.html?category=0">Sách bán
                                                         chạy</a></li>
-                                                <li class=" "><a class="menu-link" href="/cac-combo">Các Combo</a></li>
-                                                <li class=" "><a class="menu-link" href="/sach-ielts">Sách IELTS</a>
+                                                <li class=" "><a class="menu-link" href="/filter.html?category=1">Các Combo</a></li>
+                                                <li class=" "><a class="menu-link" href="/filter.html?category=2">Sách IELTS</a>
                                                 </li>
                                             </ul>
                                         </li>
