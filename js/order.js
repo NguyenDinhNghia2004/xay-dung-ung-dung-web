@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			let totalPriceSum = 0;
 			for (let i = 0; i < length; i++) {
 				const key = Number(window.localStorage.key(i));
-				if (!isNaN(key)) {
+				if (!isNaN(key) && key != null && key != undefined) {
 					// console.log(key);
 					const item = data.find(el => el.id == key);
 					const quantity = window.localStorage.getItem(String(key));
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							<div class="flex-column d-flex"><a onclick='getDetailView(${item.id})'>
 									<div class="name-cart"> ${item.productTitle} </div>
 								</a>
-								<div class="remove-cart mt-2"><a href=""
+								<div class="remove-cart mt-2"><a onclick="deleteItem(${item.id})"
 										class="font-weight-normal color-highlight">Xóa</a></div>
 							</div>
 						</div>
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				</th>
 				<td data-title="Giá"><span>${item.productPrice}</span><span class="currency-symbol">đ</span></td>
 				<td data-title="Số lượng" class="item-quantity">
-					<div class="product-quantity ">
+					<div class="product-quantity " style=" left:33%";>
 						<span class="btn-quantity quantity-subtract" onclick='minusQuantity(${item.id},${item.productPrice})'>
 							<i class="fas fa-minus"></i>
 						</span>
@@ -67,6 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		.catch(error => console.error('Error fetching data:', error));
 });
 
+function searchItem(){
+	console.log('abcc');
+    let item = document.getElementById('keyword11-id').value;
+    window.location.href = '/filter.html?keyword=' + item;
+}
+
+function deleteItem(id){
+	window.localStorage.removeItem(id);
+	let cartItem = window.localStorage.getItem('itemCart');
+	window.localStorage.setItem('itemCart',Number(cartItem) - 1);
+	alert("Đã loại bỏ sản phảm khỏi giỏ hàng!");
+	window.location.reload();
+}
+
 function getDetailView(id){
     window.localStorage.setItem('book-id',id);
     window.location.href = '/detail.html';
@@ -79,6 +93,9 @@ function minusQuantity(id,price){
 		document.getElementById(`total-price-${id}-id`).innerText = price * (Number(quantity) - 1);
 		getTotalPriceSum();
 		window.localStorage.setItem(id,(Number(quantity) - 1));
+	}
+	else{
+		deleteItem(id);
 	}
 	
 }

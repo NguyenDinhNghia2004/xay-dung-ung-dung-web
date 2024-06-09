@@ -63,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching data:', error));
 });
 
+function searchItem(){
+    let item = document.getElementById('keyword11-id').value;
+    window.location.href = '/filter.html?keyword=' + item;
+}
+
 function getDetailView(id){
     window.localStorage.setItem('book-id',id);
     window.location.href = '/detail.html';

@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="price"><span class="price-amount">${book.productPrice}<span
                             class="currency-symbol">đ</span></span></div>
             </div>`;
-                if(book.mosted == 1){
+                if(book.category == 0){
                     const bookCardM1 = document.createElement('div');
                     bookCardM1.innerHTML = html1;
                     bookList1.appendChild(bookCardM1);
@@ -76,6 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching data:', error));
 });
 
+
+function searchItem(){
+    let item = document.getElementById('keyword11-id').value;
+    window.location.href = '/filter.html?keyword=' + item;
+}
 
 function getDetailView(id){
     window.localStorage.setItem('book-id',id);

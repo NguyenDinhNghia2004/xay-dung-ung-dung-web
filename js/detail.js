@@ -42,6 +42,11 @@ function changeQuantity(item){
 	}
 }
 
+function searchItem(){
+    let item = document.getElementById('keyword11-id').value;
+    window.location.href = '/filter.html?keyword=' + item;
+}
+
 function addQuantity(){
 	let quantity = document.getElementById(`quantity-id`).value;
 	document.getElementById(`quantity-id`).value = Number(quantity) + 1;

@@ -15,7 +15,7 @@
         "productDescription": "Bộ sách Hacker IELTS với các kỹ năng nghe, nói, đọc, viết.",
         "productPrice": 280000,
         "mosted" : 1,
-        "category" : 1
+        "category" : 0
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "productDescription": "Sách Destination B1 luyện ngữ pháp và từ vựng cho kỳ thi IELTS.",
         "productPrice": 252000,
         "mosted" : 1,
-        "category" : 1
+        "category" : 0
     },
     {
         "id": 4,
@@ -42,7 +42,7 @@
         "productDescription": "Sách Destination C1 & C2 luyện ngữ pháp và từ vựng nâng cao cho kỳ thi IELTS.",
         "productPrice": 28000,
         "mosted" : 1,
-        "category" : 2
+        "category" : 0
     },
     {
         "id": 6,
